@@ -16,8 +16,8 @@ luigisDebt = luigisDebt - 35;
 console.log(luigisDebt);
 // → 105
 
-var one = 1 , two = 2;
-console . log ( one + two ) ;
+var one = 1, two = 2;
+console.log(one + two);
 // -> 3
 
 
@@ -26,7 +26,7 @@ function. A function is a piece of program wrapped in a value. Such
 values can be applied in order to run the wrapped program. For example, in a browser environment, the variable alert holds a function that
 shows a little dialog box with a message. It is used like this:*/
 
-alert (" Good morning !") ; //Executing a function is called invoking, calling, or applying it. 
+alert(" Good morning !"); //Executing a function is called invoking, calling, or applying it. 
 
 /*Note: Most JavaScript
 systems (including all modern web browsers and Node.js) provide a
@@ -36,7 +36,7 @@ device.*/
 //Note that all the functions will be loaded before the alert functions and the ones after the alert will wait until you press 'ok'
 
 var x = 30;
-console . log (" the value of x is " , x ) ; /*'console.log' is actually an expression that retrieves the log property from the value
+console.log(" the value of x is ", x); /*'console.log' is actually an expression that retrieves the log property from the value
 held by the console variable.*/
 // → the value of x is 30
 
@@ -89,21 +89,34 @@ else{
 
 /*If we have more than two paths to choose from, multiple if/else pairs
 can be “chained” together. Here’s an example:*/
-var num = Number ( prompt (" Pick a number " , "0") ) ;
-if ( num < 10)
-alert (" Small ") ;
-else if ( num < 100)
-alert (" Medium ") ;
-else
-alert (" Large ") ;
 
+
+/*var num = Number(prompt(" Pick a number ", "0"));
+if (num < 10)
+    alert(" Small ");
+else if (num < 100)
+    alert(" Medium ");
+else
+    alert(" Large ");
+*/
 
 //////////////****while and do loops ***/////////////////////
 var result = 1;
 var counter = 0;
-while ( counter < 10) {
-result = result * 2;
-counter = counter + 1;
+while (counter < 10) {
+    result = result * 2;
+    counter = counter + 1;
 }
-console . log ( result ) ;
+console.log(result);
 // → 1024
+
+
+/*The do loop is a control structure similar to the while loop. It differs
+only on one point: a do loop always executes its body at least once, and
+it starts testing whether it should stop only after that first execution.
+To reflect this, the test appears after the body of the loop:*/
+
+do {
+    var yourName = prompt (" Who are you ?") ;
+    } while (! yourName ) ;
+    console . log ( yourName ) ;
