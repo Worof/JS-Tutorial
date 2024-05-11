@@ -122,7 +122,7 @@ To reflect this, the test appears after the body of the loop:*/
     console . log ( yourName ) ;*/
 
 
-    /*IMPORTANT NOTE: This program will force you to enter a name. It will ask again and
+/*IMPORTANT NOTE: This program will force you to enter a name. It will ask again and
 again until it gets something that is not an empty string. Applying
 the ! operator will convert a value to Boolean type before negating it,
 and all strings except "" convert to true. This means the loop continues
@@ -134,8 +134,8 @@ going round until you provide a name that is not the empty string.
 
 //This is the same as the while do loop but only shorter and in more comprehensive form
 
-for ( var number = 0; number <= 12; number = number + 2)
-    console . log ( number ) ;
+for (var number = 0; number <= 12; number = number + 2)
+    console.log(number);
 // → 0
 // → 2
 // ... etcetera    
@@ -144,3 +144,42 @@ for ( var number = 0; number <= 12; number = number + 2)
 The part before the first semicolon initializes the loop, usually by defining a variable. The second part is the expression that checks whether
 the loop must continue. The final part updates the state of the loop
 after every iteration.*/
+
+
+
+
+
+
+/////////////////////////****BREAKING OUT OF A LOOP *****////////////////////
+
+/*Having the loop’s condition produce false is not the only way a loop
+can finish. There is a special statement called break that has the effect
+49
+of immediately jumping out of the enclosing loop*/
+
+for (var current = 20; ; current++) {
+    if (current % 7 == 0)
+        break;  /*If you were to leave out that break statement or accidentally write a
+    condition that always produces true, your program would get stuck in
+    an infinite loop.*/
+}
+console.log(current);
+// → 21
+
+
+
+////////////////*****Dispatching on a value with switch ****//////////////////////
+
+switch (prompt(" What is the weather like ?")) {
+    case "rainy":
+        console.log(" Remember to bring an umbrella .");
+        break;
+    case "sunny":
+        console.log(" Dress lightly .");
+    case "cloudy":
+        console.log(" Go outside .");
+        break;
+    default:
+        console.log(" Unknown weather type !");
+        break;
+}
