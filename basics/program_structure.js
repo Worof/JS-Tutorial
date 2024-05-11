@@ -116,10 +116,10 @@ only on one point: a do loop always executes its body at least once, and
 it starts testing whether it should stop only after that first execution.
 To reflect this, the test appears after the body of the loop:*/
 
-do {
+/*do {
     var yourName = prompt (" Who are you ?") ;
     } while (! yourName ) ;
-    console . log ( yourName ) ;
+    console . log ( yourName ) ;*/
 
 
     /*IMPORTANT NOTE: This program will force you to enter a name. It will ask again and
@@ -128,3 +128,19 @@ the ! operator will convert a value to Boolean type before negating it,
 and all strings except "" convert to true. This means the loop continues
 going round until you provide a name that is not the empty string.
 */
+
+
+////////////////////////////**** FOR LOOPS ***///////////////////////////////
+
+//This is the same as the while do loop but only shorter and in more comprehensive form
+
+for ( var number = 0; number <= 12; number = number + 2)
+    console . log ( number ) ;
+// → 0
+// → 2
+// ... etcetera    
+
+/*IMPORTANT NOTE: The parentheses after a for keyword must contain two semicolons.
+The part before the first semicolon initializes the loop, usually by defining a variable. The second part is the expression that checks whether
+the loop must continue. The final part updates the state of the loop
+after every iteration.*/
