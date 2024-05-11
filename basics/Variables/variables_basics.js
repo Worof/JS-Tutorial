@@ -58,3 +58,28 @@ prompt (" Tell me everything you know ." , "...") ;
 /*BTW!!! These two functions aren’t used much in modern web programming,
 mostly because you have no control over the way the resulting windows
 look, but they are useful for toy programs and experiments.*/
+
+
+//////////////////*CONTROL FLOW*//////////////
+
+/*When your program contains more than one statement, the statements
+are executed, predictably, from top to bottom. As a basic example, this
+program has two statements:
+The first one asks the user for a number,
+and the second, which is executed afterward, shows the square of that
+number.*/
+
+var theNumber = Number ( prompt (" Pick a number " , "") ) ;
+alert (" Your number is the square root of " +
+theNumber * theNumber ) ;
+
+/////////////////////////*** conditional execution*****///////////////////
+
+/*Conditional execution is written with the if keyword in JavaScript. In
+the simple case, we just want some code to be executed if, and only if,
+a certain condition holds.*/
+
+var theNumber = Number ( prompt (" Pick a number " , "") ) ;
+if (! isNaN ( theNumber ) )
+alert (" Your number is the square root of " +
+theNumber * theNumber ) ;
