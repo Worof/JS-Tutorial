@@ -48,3 +48,13 @@ clicks Cancel.*/
 
 confirm (" Shall we , then ?") ;
 
+/*The prompt function can be used to ask an “open” question. The first
+argument is the question, the second one is the text that the user starts
+with. A line of text can be typed into the dialog window, and the
+function will return this text as a string.*/
+
+prompt (" Tell me everything you know ." , "...") ;
+
+/*BTW!!! These two functions aren’t used much in modern web programming,
+mostly because you have no control over the way the resulting windows
+look, but they are useful for toy programs and experiments.*/
