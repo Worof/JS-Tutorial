@@ -46,14 +46,14 @@ up windows. You can ask the user an OK/Cancel question using confirm.
 This returns a Boolean: true if the user clicks OK and false if the user
 clicks Cancel.*/
 
-confirm (" Shall we , then ?") ;
+//confirm (" Shall we , then ?") ;
 
 /*The prompt function can be used to ask an “open” question. The first
 argument is the question, the second one is the text that the user starts
 with. A line of text can be typed into the dialog window, and the
 function will return this text as a string.*/
 
-prompt (" Tell me everything you know ." , "...") ;
+//prompt (" Tell me everything you know ." , "...") ;
 
 /*BTW!!! These two functions aren’t used much in modern web programming,
 mostly because you have no control over the way the resulting windows
@@ -69,9 +69,9 @@ The first one asks the user for a number,
 and the second, which is executed afterward, shows the square of that
 number.*/
 
-var theNumber = Number ( prompt (" Pick a number " , "") ) ;
+/*var theNumber = Number ( prompt (" Pick a number " , "") ) ;
 alert (" Your number is the square root of " +
-theNumber * theNumber ) ;
+theNumber * theNumber ) ;*/
 
 /////////////////////////*** conditional execution*****///////////////////
 
@@ -79,7 +79,20 @@ theNumber * theNumber ) ;
 the simple case, we just want some code to be executed if, and only if,
 a certain condition holds.*/
 
-var theNumber = Number ( prompt (" Pick a number " , "") ) ;
+/*var theNumber = Number ( prompt (" Pick a number " , "") ) ;
 if (! isNaN ( theNumber ) )
 alert (" Your number is the square root of " +
 theNumber * theNumber ) ;
+else{
+    alert("Enter a number please.")
+}*/
+
+/*If we have more than two paths to choose from, multiple if/else pairs
+can be “chained” together. Here’s an example:*/
+var num = Number ( prompt (" Pick a number " , "0") ) ;
+if ( num < 10)
+alert (" Small ") ;
+else if ( num < 100)
+alert (" Medium ") ;
+else
+alert (" Large ") ;
