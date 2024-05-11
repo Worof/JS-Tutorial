@@ -27,3 +27,15 @@ values can be applied in order to run the wrapped program. For example, in a bro
 shows a little dialog box with a message. It is used like this:*/
 
 alert (" Good morning !") ; //Executing a function is called invoking, calling, or applying it. 
+
+/*Note: Most JavaScript
+systems (including all modern web browsers and Node.js) provide a
+console.log function that writes out its arguments to some text output
+device.*/
+
+//Note that all the functions will be loaded before the alert functions and the ones after the alert will wait until you press 'ok'
+
+var x = 30;
+console . log (" the value of x is " , x ) ; /*'console.log' is actually an expression that retrieves the log property from the value
+held by the console variable.*/
+// → the value of x is 30
