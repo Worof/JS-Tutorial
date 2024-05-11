@@ -23,5 +23,3 @@ JavaScript can be embedded directly into HTML, executed client-side by the brows
 ## Resources
 For a deeper dive into JavaScript, consider reading "Eloquent JavaScript" by Marijn Haverbeke. This book provides an extensive introduction to programming with JavaScript, covering basic to advanced topics.
 
----
-This introduction uses content and quotations from *Eloquent JavaScript* by Marijn Haverbeke, used under a Creative Commons attribution-noncommercial license.
