@@ -39,3 +39,12 @@ var x = 30;
 console . log (" the value of x is " , x ) ; /*'console.log' is actually an expression that retrieves the log property from the value
 held by the console variable.*/
 // → the value of x is 30
+
+
+/*Browser environments contain other functions besides alert for popping
+up windows. You can ask the user an OK/Cancel question using confirm.
+This returns a Boolean: true if the user clicks OK and false if the user
+clicks Cancel.*/
+
+confirm (" Shall we , then ?") ;
+
