@@ -1,6 +1,6 @@
 /////////////******Looping a triangle ***//////////////////
 let line = '#';
-for(var i= 0; i <= 5; i++){
+for (var i = 0; i <= 5; i++) {
     console.log(line)
     line += '#'
 }
@@ -9,14 +9,34 @@ for(var i= 0; i <= 5; i++){
 
 
 /////////////////////////*****FizzBuzz *****///////////////////////
-for (i = 1; i <= 100; i++){
-    if (i%3 === 0 || i%5 === 0){
-        console.log('BuzzFizz')
+for (i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('FizzBuzz')
     }
-    if (i%3 === 0){
+    else if (i % 3 === 0) {
         console.log('Fizz')
     }
-    if (i%5 === 0){
+    else if (i % 5 === 0) {
         console.log('Buzz')
     }
+    else {
+        console.log(i)
+    }
 }
+
+/////////////////////////*****CHESS BOARD *////////////////////
+let size = 8;
+let board = "";
+
+for (let y =0; y < size; y++){
+    for (let x = 0; x< size; x++){ 
+        if((x+y)%2 === 0){
+            board += " ";
+        } else{
+            board += "#"
+        }
+    }
+    board += "\n"
+}
+
+console.log(board)
