@@ -63,3 +63,44 @@ f2 () ;
 console . log ( x ) ;
 // → inside f2
 
+/*SOME NOTES: 1)The usage of local variables helps prevent accidental interference between functions.
+If all variables were shared by the whole program, it’d take a lot of effort
+to make sure no name is ever used for two different purposes.
+2) By treating function-local variables as existing only within the function, the language makes
+it possible to read and understand functions as small universes, without
+having to worry about all the code at once. 
+*/
+
+
+
+
+
+
+
+
+
+
+///////////////////////////NESTED SCOPE///////////////////////////
+
+var landscape = function () {
+    var result = "";
+    var flat = function ( size ) {
+    for ( var count = 0; count < size ; count ++)
+    result += " _ ";
+    };
+    var mountain = function ( size ) {
+    result += "/";
+    for ( var count = 0; count < size ; count ++)
+    result += " '";
+    result += "\\";
+    };
+    flat (3) ;
+    mountain (4) ;
+    flat (6) ;
+    mountain (1) ;
+    flat (1) ;
+    return result ;
+    };
+    console . log ( landscape () ) ;
+    // → ___ / ' ' ' '\ ______ / '\ _
+    
