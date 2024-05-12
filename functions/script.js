@@ -1,6 +1,11 @@
-//##1##: 
-/*The simplest kind of statement is an expression with a semicolon
-after it. This is a program: */
+///////////////////////*******Defining a function *********//////////////////////////
 
-1;
-! false ;
+/*A function definition is just a regular variable definition where the value
+given to the variable happens to be a function*/
+
+var square = function ( x ) {
+    return x * x ;
+    };
+    console . log ( square (12) ) ;
+    // → 144
+    
