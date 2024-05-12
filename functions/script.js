@@ -20,9 +20,9 @@ makeNoise();
 // → Pling !
 var power = function (base, exponent) {
     var result = 1;
-    for (var count = 0; count < exponent; count++){
+    for (var count = 0; count < exponent; count++) {
         result *= base;
-       
+
     }
     return result;
 
@@ -51,16 +51,16 @@ function itself.
 
 var x = " outside ";
 var f1 = function () {
-var x = " inside f1 ";
+    var x = " inside f1 ";
 };
-f1 () ;
-console . log ( x ) ;
+f1();
+console.log(x);
 // → outside
 var f2 = function () {
-x = " inside f2 ";
+    x = " inside f2 ";
 };
-f2 () ;
-console . log ( x ) ;
+f2();
+console.log(x);
 // → inside f2
 
 /*SOME NOTES: 1)The usage of local variables helps prevent accidental interference between functions.
@@ -84,23 +84,41 @@ having to worry about all the code at once.
 
 var landscape = function () {
     var result = "";
-    var flat = function ( size ) {
-    for ( var count = 0; count < size ; count ++)
-    result += " _ ";
+    var flat = function (size) {
+        for (var count = 0; count < size; count++)
+            result += " _ ";
     };
-    var mountain = function ( size ) {
-    result += "/";
-    for ( var count = 0; count < size ; count ++)
-    result += " '";
-    result += "\\";
+    var mountain = function (size) {
+        result += "/";
+        for (var count = 0; count < size; count++)
+            result += " '";
+        result += "\\";
     };
-    flat (3) ;
-    mountain (4) ;
-    flat (6) ;
-    mountain (1) ;
-    flat (1) ;
-    return result ;
-    };
-    console . log ( landscape () ) ;
-    // → ___ / ' ' ' '\ ______ / '\ _
-    
+    flat(3);
+    mountain(4);
+    flat(6);
+    mountain(1);
+    flat(1);
+    return result;
+};
+console.log(landscape());
+// → ___ / ' ' ' '\ ______ / '\ _
+
+
+/////////////////////FUNCTIONS AS VALUES ///////////////////////
+
+/* A function value can do all the things that
+other values can do—you can use it in arbitrary expressions, not just
+call it.*/
+var launchMissiles = function (value) {
+    let safeMode = true;
+
+    if(!safeMode){
+        missileSystem.launch(" now ");
+
+
+    } else {
+        console.log("Launch prevented by safe mode.");
+    }
+};
+launchMissiles(false) //note that's just a basic example
